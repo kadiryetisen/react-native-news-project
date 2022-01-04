@@ -15,6 +15,7 @@ const styles = StyleSheet.create({
   categoryImage: {
     height: 150,
     width: 150,
+    marginBottom: 3,
     marginLeft: 10,
     borderRadius: 12,
   },
@@ -24,6 +25,7 @@ const styles = StyleSheet.create({
   },
   categoryTitle: {
     fontSize: 15,
+
     color: "white",
     fontWeight: "bold",
   },

@@ -1,4 +1,4 @@
-import { View, FlatList, TouchableOpacity } from "react-native"
+import { View, FlatList } from "react-native"
 import CarouselItem from "./CarouselItem"
 
 const Carousel = ({ data, navigation }) => {
@@ -11,6 +11,7 @@ const Carousel = ({ data, navigation }) => {
         scrollEnabled
         snapToAlignment="center"
         scrollEventThrottle={16}
+        keyExtractor={(item, index) => index + "_" + item.title.toString()}
         showsHorizontalScrollIndicator={false}
         renderItem={({ item }) => (
           <CarouselItem

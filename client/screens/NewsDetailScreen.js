@@ -1,17 +1,15 @@
 import { StyleSheet, View, Image, Text, ScrollView } from "react-native"
-import news from "../resources/news"
-const NewsDetailScreen = ({ route }) => {
-  const { categoryId, key } = route.params
 
-  let data = news[`${categoryId}`][`${Number(key)}`]
+const NewsDetailScreen = ({ route }) => {
+  const { item } = route.params
 
   return (
     <View style={styles.container}>
-      <Image style={styles.newsImage} source={data.image} />
-      <Text style={styles.newsTitle}>{data.title}</Text>
+      <Image style={styles.newsImage} source={{ uri: item.urlToImage }} />
+      <Text style={styles.newsTitle}>{item.title}</Text>
       <View style={styles.content}>
         <ScrollView>
-          <Text style={styles.newsText}> {data.content} </Text>
+          <Text style={styles.newsText}> {item.content} </Text>
         </ScrollView>
       </View>
     </View>

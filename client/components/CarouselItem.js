@@ -7,18 +7,18 @@ import {
   Pressable,
 } from "react-native"
 const { width, height } = Dimensions.get("window")
+
 const CarouselItem = ({ item, navigation }) => {
   return (
     <View style={styles.cardView}>
       <Pressable
         onPress={() =>
           navigation.navigate("Details", {
-            categoryId: item.categoryId,
-            key: item.key,
+            item: item,
           })
         }
       >
-        <Image style={styles.image} source={item.image} />
+        <Image style={styles.image} source={{ uri: item.urlToImage }} />
       </Pressable>
       <View style={styles.textView}>
         <Text style={styles.itemTitle}>{item.title}</Text>

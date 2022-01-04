@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react"
 import { View, StyleSheet, FlatList, TouchableOpacity } from "react-native"
-import categories from "../resources/categories"
 import Category from "../components/Category"
+// get category name from resources
+import categories from "../resources/categories"
 
 const CategoryScreen = ({ navigation }) => {
   const [categoryList, setCategoryList] = useState([])
@@ -26,8 +27,8 @@ const CategoryScreen = ({ navigation }) => {
               <Category
                 style={styles.eachCategoryBlock}
                 categoryId={item.categoryId}
-                imageUri={item.imageUri}
                 image={item.image}
+                key={item.title}
               />
             </View>
           </TouchableOpacity>

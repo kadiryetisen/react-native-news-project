@@ -3,7 +3,7 @@ import { StyleSheet, View, Text, Image } from "react-native"
 const News = (props) => {
   return (
     <View style={styles.container}>
-      <Image style={styles.newsImage} source={props.image} />
+      <Image style={styles.newsImage} source={{ uri: props.image }} />
       <View style={styles.newsText}>
         <View style={styles.dateDiv}>
           <Text style={styles.date}>{props.date}</Text>
