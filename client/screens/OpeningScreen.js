@@ -2,6 +2,7 @@ import { useEffect } from "react"
 import { StyleSheet, View, Text } from "react-native"
 
 const OpeningScreen = ({ navigation }) => {
+  //navigate the categories screen after 1.5 seconds
   useEffect(() => {
     setTimeout(() => {
       navigation.navigate("Categories")
